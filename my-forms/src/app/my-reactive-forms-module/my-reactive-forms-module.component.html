@@ -1,0 +1,5 @@
+<form [formGroup]="myFormGroup" (ngSubmit)="submitForm(myFormGroup)">
+  <div *ngIf="!myFormGroup.controls['sku'].valid && myFormGroup.controls['sku'].touched" style="color:red">Field Required</div> 
+  <input [formControl]="myFormGroup.controls['sku']"/>
+  <input type="Submit" [disabled]="!myFormGroup.valid" />
+</form>
